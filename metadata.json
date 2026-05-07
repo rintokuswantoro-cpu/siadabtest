@@ -1,0 +1,6 @@
+{
+  "name": "Lapor ASN Sultra",
+  "description": "Aplikasi pengaduan masyarakat untuk kedisiplinan ASN di wilayah Sulawesi Tenggara.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "Report": {
+      "title": "Report",
+      "description": "A report about an ASN misconduct",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reporterEmail": { "type": "string", "format": "email" },
+        "reporterName": { "type": "string" },
+        "asnName": { "type": "string" },
+        "asnInstansi": { "type": "string" },
+        "misconductType": { "type": "string", "enum": ["Bolos Jam Kerja", "Tempat Hiburan", "Lainnya"] },
+        "description": { "type": "string" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" },
+            "address": { "type": "string" }
+          },
+          "required": ["lat", "lng"]
+        },
+        "photoUrl": { "type": "string" },
+        "status": { "type": "string", "enum": ["Pending", "Ditinjau", "Selesai", "Ditolak"] },
+        "feedback": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["reporterEmail", "asnInstansi", "location", "status", "createdAt"]
+    },
+    "Department": {
+      "title": "Department",
+      "description": "Organization units (OPD) in Sultra",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" }
+      },
+      "required": ["name"]
+    }
+  },
+  "firestore": {
+    "reports": {
+      "schema": "Report",
+      "description": "User submitted reports"
+    },
+    "departments": {
+      "schema": "Department",
+      "description": "List of OPDs"
+    }
+  }
+}
