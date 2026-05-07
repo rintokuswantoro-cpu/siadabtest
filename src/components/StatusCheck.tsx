@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Search, Loader2, Calendar, FileText, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
+import { motion } from 'motion/react';
 
 export function StatusCheck() {
   const [reportId, setReportId] = useState('');

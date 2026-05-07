@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ReportForm } from './components/ReportForm';
-import { StatusCheck } from './components/StatusCheck';
+import { ReportForm } from '@/components/ReportForm';
+import { StatusCheck } from '@/components/StatusCheck';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Toaster } from '@/components/ui/sonner';
 import { ShieldCheck, MessageSquarePlus, FileSearch, Building2, MapPin } from 'lucide-react';

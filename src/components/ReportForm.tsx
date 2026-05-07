@@ -25,11 +25,11 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { MapSelector } from './MapSelector';
-import { PhotoUpload } from './PhotoUpload';
+import { MapSelector } from '@/components/MapSelector';
+import { PhotoUpload } from '@/components/PhotoUpload';
 import { OPD_SULTRA, MISCONDUCT_TYPES } from '@/constants';
 import { Loader2, Send } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const formSchema = z.object({
   reporterName: z.string().min(2, 'Nama minimal 2 karakter'),
